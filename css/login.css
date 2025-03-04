@@ -1,0 +1,225 @@
+
+:root {
+    --btn-bg-color: #7833f0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #7fa4da, #1950c7);
+}
+
+.container {
+    position: relative;
+    width: 900px;
+    max-width: 100%;
+    min-height: 480px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.sign-up,
+.sign-in {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.6s ease-in-out;
+    padding: 0 15px;
+}
+
+.sign-up {
+    height: 100%;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.sign-in {
+    height: 100%;
+    width: 50%;
+    z-index: 2;
+}
+.sign-up .role-list{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-up .role-list li{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.sign-up .role-list li input{
+   padding: 0;
+   height: 20px;
+    width: 20px;
+}
+form {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5px;
+    height: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-weight: hold;
+    margin-bottom: 10px;
+
+}
+
+p {
+    font-size: 16px;
+    word-spacing: 2px;
+    font-weight: 100;
+    margin: 15px 0 20px;
+    color: #333;
+    font-weight: bold;
+}
+.input-group{
+    position: relative;
+    width: 100%;
+}
+input {
+    background: #eee;
+    padding: 12px 15px;
+    margin: 8px 15px;
+    border-radius: 5px;
+    width: 90%;
+    border: none;
+    outline: none;
+}
+
+.icon {
+    position: absolute;
+    bottom: 4%;
+    right:8%;
+    transform: translateY(-50%);
+    color: #333;
+    cursor: pointer;
+}
+
+
+a{
+    text-decoration: none;
+    color: #105bca;
+    font-weight: bold;  
+}
+a:hover{
+    opacity: 0.8;
+}
+button {
+    color: #ffffff;
+    background: #105bca;
+    font-weight: bold;
+    padding: 12px 55px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 1px solid #105bca;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#signIn,
+#signUp {
+    border-color: transparent;
+    border: 2px solid #fff;
+}
+
+/* lớp chèn vào tạo hiệu ứng */
+/* =================================== */
+.container.right-panel-active .sign-in {
+    transform: translateX(100%);
+}
+
+.container.right-panel-active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+
+}
+
+/* =================================== */
+.panel-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.8s ease-in-out;
+    z-index: 100;
+
+}
+.container.right-panel-active .panel-container {
+    transform: translateX(-100%);
+}
+
+.panel-container .panel {
+    position: relative;
+    color: #fff;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(to right, #6ab7e3, #338bf0);
+    transform: translateX(0);
+    transition: transform 0.8s ease-in-out;
+}
+.container.right-panel-active .panel {
+    transform: translateX(50%);
+}
+.panel-left,
+.panel-right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.8s ease-in-out;
+
+}
+.panel-left {
+    transform: translateX(-20%);
+    
+}
+
+.panel-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.right-panel-active .panel-left {
+    transform: translateX(0);
+    
+}
+
+.container.right-panel-active .panel-right {
+    transform: translateX(20%);
+}

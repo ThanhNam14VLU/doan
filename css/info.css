@@ -1,0 +1,88 @@
+:root{
+    --primary-color: #fff;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right top, #b8cef7, #bcf1fa);
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    position: relative;
+    width: 900px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 100%;
+   background: linear-gradient(to right top, #6590df, #6cdbeb);
+
+}
+h1{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    padding:20px 0;
+    font-weight: bold;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;  
+}
+button{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background:#2367e3;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+}
+button:active{
+    transform: scale(0.95);
+}
+form .avatar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%; 
+    height: 100%;
+}
+#avatarPreview{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    margin: 20px 0 15px 0;
+    border: 5px solid #2367e3;
+}
+#uploadBtn{
+    width: 50%;
+    height: 50%;
+    border-radius:25px;
+}
+.info-text{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 15px;
+}
+.info-text input,select{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 15px ;
+    border-bottom: 1px solid #333;
+    font-size: 1.2rem;
+    outline: none;
+}
